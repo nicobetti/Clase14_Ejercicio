@@ -8,10 +8,29 @@ const usuario = document.getElementById('nombre');
 const pago = document.getElementById('pago');
 const efectivo = document.getElementById('ft');
 
+const payments = [];
+
 function repartir() {
-    agregarGastosAListas();
-    agregarUltimo();
-    mostrarPagos();
+    addExpense();
+    addLast();
+    showResult();
+}
+
+function addExpense(){
+    payments.push({
+        usuario : usuario.value,
+        pago: pago.value,
+        fecha : new Date(),
+        efectivo : efectivo.checked
+    });
+}
+
+function addLast(){
+
+}
+
+function showResult(){
+
 }
 
 function agregarGastosAListas() {
